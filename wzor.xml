@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="wzor.xslt" ?>
+<Dane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <NumerFaktury>98/79/2018</NumerFaktury>
+  <Przedmiot>
+    <nazwa>Baterie AAA</nazwa>
+    <ilosc>35</ilosc>
+    <brutto>342,87</brutto>
+  </Przedmiot>
+
+  <Przedmiot>
+      <nazwa>Kabel MiniJack 3,5mm</nazwa>
+      <ilosc>6</ilosc>
+      <brutto>112,20</brutto>
+  </Przedmiot>
+
+  <Przedmiot>
+      <nazwa>Pendrive 128GB</nazwa>
+      <ilosc>2</ilosc>
+      <brutto>88,54</brutto>
+  </Przedmiot>
+
+   <Przedmiot>
+      <nazwa>Licencja WinRAR</nazwa>
+      <ilosc>1</ilosc>
+      <brutto>192,31</brutto>
+   </Przedmiot>
+</Dane>

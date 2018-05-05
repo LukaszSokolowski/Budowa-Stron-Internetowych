@@ -1,0 +1,95 @@
+body
+{
+	background-color: lightgray;
+	font-family:        Verdana;
+	font-size:             14px;
+	color:                black;
+}
+
+h1 {
+	font-size:        40px;
+}
+
+a.button {
+ background-color: #f4df42;
+ color:            black;
+ padding:      15px 62px;
+ border-radius:     12px;
+ border: 2px solid black;
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7), 0 6px 20px 0 rgba(0,0,0,0.19);
+ text-align:      center;
+ text-decoration:   none;
+ font-size:         16px;
+}
+
+.container {
+	padding:          10px;
+}
+
+.column33 {
+	float:            left;
+	width:             33%;
+	padding-top:      10px;
+  padding-bottom:   10px;
+}
+.column25 {
+	float:            left;
+	width:             25%;
+	padding-top:      10px;
+	padding-bottom:   10px;
+}
+.column25c {
+	float:            left;
+	width:             25%;
+	padding-top:      10px;
+	padding-bottom:   10px;
+	text-align:     center;
+}
+.column50 {
+	float:            left;
+	width:             50%;
+	padding-top:      10px;
+	padding-bottom:   10px;
+}
+.column75 {
+	float:            left;
+	width:             75%;
+	padding-top:      10px;
+	padding-bottom:   10px;
+}
+.column100 {
+	float: 				    left;
+	width: 				    100%;
+	padding-top:      10px;
+	padding-bottom:   10px;
+}
+
+.bottom {
+	float:					  left;
+	width:             16%;
+	padding-top:      10px;
+	padding-bottom:   10px;
+	margin-left:       5px;
+}
+.clear {
+  clear:            both;
+}
+.form {
+	float:            left;
+	padding-bottom:   10px;
+}
+.input {
+	padding-left:    350px;
+	padding-bottom:   10px;
+}
+.input::after {
+	clear: both;
+}
+
+.mainForm {
+	width:             40%;
+	margin:         0 auto;
+}
+.inputs {
+	border-radius: 5px;
+}
