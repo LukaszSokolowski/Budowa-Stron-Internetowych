@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <?php
 session_start();
 if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
 	header('Location: login.php');
 }
 ?>
-<!DOCTYPE html>
 <html lang="zxx">
   <head>
     <meta charset="utf-8">
