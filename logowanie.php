@@ -28,6 +28,20 @@
 			  font-family: Verdana;
 			  font-size: large;
 			}
+			input[type=submit] {
+				margin-top: 40px;
+				margin-left: 100px;
+				width: 255px;
+				height: 30px;
+				border-radius: 4px;
+				border-width: 3px;
+				font-style: normal;
+				font-size: 15px;
+			}
+			input[type=submit]:hover {
+				background-color: #94ced7;
+			}
+
 		</style>
 	</head>
   <body>
