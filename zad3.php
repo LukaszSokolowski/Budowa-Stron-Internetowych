@@ -1,10 +1,7 @@
-<!DOCTYPE html>
 <?php
-session_start();
-if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
-	header('Location: login.php');
-}
+require_once('authenticate.php');
 ?>
+<!DOCTYPE html>
 <html lang="zxx">
   <head>
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +22,6 @@ if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
          errorsCount=0;
       }
     }
-
     function clearAllInput() {
       document.getElementById('uwagi').value = "";
       document.getElementById('imie').value = "";

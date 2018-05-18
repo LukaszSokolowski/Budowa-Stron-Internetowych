@@ -1,8 +1,5 @@
 <?php
-session_start();
-if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
-	header('Location: login.php');
-}
+require_once('authenticate.php');
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -14,13 +11,13 @@ if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
   <body>
 <center>
     <h1>Strona główna <br> Łukasz Sokołowski</h1><br>
-        <p><a href="zad1.php" class="button">Zadanie 1</a></p><br>
-        <p><a href="zad2.php" class="button">Zadanie 2</a></p><br>
-        <p><a href="zad3.php" class="button">Zadanie 3</a></p><br>
+        <p><a href="zad1.php" class="button">&nbsp;&nbsp;Artykuł&nbsp;&nbsp;</a></p><br>
+        <p><a href="zad2.php" class="button">&nbsp;&nbsp;Galeria&nbsp;&nbsp;</a></p><br>
+        <p><a href="zad3.php" class="button">Formularz</a></p><br>
         <p><a href="wzor.xml"  class="button">&nbsp;&nbsp;Faktura&nbsp;&nbsp;</a></p><br>
         <p><a href="kalkulator.php" class="button">Kalkulator</a></p><br>
         <br><br>
-        <p><a href="logout.php" class="button">Wyloguj</a></p><br>
+        <p><a href="logout.php" class="button">&nbsp;&nbsp;Wyloguj&nbsp;&nbsp;</a></p><br>
       <p>
       <br><br>
           <a href="http://validator.w3.org/check?uri=referer">

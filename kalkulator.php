@@ -1,8 +1,5 @@
 <?php
-session_start();
-if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
-	header('Location: login.php');
-}
+require_once('authenticate.php');
 ?>
 <!DOCTYPE HTML>
 <html>

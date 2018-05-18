@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 } else {
 ?>
 <!DOCTYPE html>
+
 <html lang="zxx">
     <head>
 	    <meta charset="utf-8">
