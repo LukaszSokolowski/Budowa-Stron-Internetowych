@@ -36,7 +36,8 @@
 	    $wojewodztwo = $_POST['wojewodztwo'];
 	    $prawo_jazdy = $_POST['dndnslakjdnalkjdnlakjsdlakjsdhlakjshdlaskjdhla'];
 	    $plec = $_POST['bdalksjdhlaskjhdlakjhsdl'];
-	    $uwagi = $_POST['uwagi']; 
+	    $uwagi = $_POST['uwagi'];
+	     
 	?>
 
   </head>
@@ -47,7 +48,7 @@
       </center>
       <br>
 
-<form id="myForm" action="formResult.php">
+<form id="myForm" action="formResult.php" method="post">
   <div class="container">
 
   		<div class="row">
@@ -152,7 +153,7 @@
 	  <div class="row">
 		  <div class="col-lg-4"></div>
 	      <div class="col-lg-4">
-		      <input type="button" value=" Zatwierdź formularz ">
+		      <input type="submit" value=" Zatwierdź formularz">
 	      </div>
 
 	      <div class="col-lg-2">
