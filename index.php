@@ -14,7 +14,7 @@
         <p><a href="wzor.xml"  class="button">&nbsp;&nbsp;Faktura&nbsp;&nbsp;</a></p><br>
         <p><a href="kalkulator.php" class="button">Kalkulator</a></p><br>
         <br><br>
-        <p><a href="logout.php" class="button">&nbsp;&nbsp;Wyloguj&nbsp;&nbsp;</a></p><br>
+        <p><a href="logout.php" class="button">&nbsp;&nbsp; Wyloguj &nbsp;&nbsp;</a></p><br>
       <p>
       <br><br>
           <a href="http://validator.w3.org/check?uri=referer">
