@@ -12,16 +12,6 @@ require_once('authenticate.php');
 
     <script type="text/javascript">
 
-    var errorsCount = 0;
-    function confirmForm()
-    {
-      if(errorsCount==0){
-        document.getElementById("myForm").submit();
-      }
-      else {
-         errorsCount=0;
-      }
-    }
     function clearAllInput() {
       document.getElementById('uwagi').value = "";
       document.getElementById('imie').value = "";
