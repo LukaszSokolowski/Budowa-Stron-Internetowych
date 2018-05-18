@@ -1,6 +1,3 @@
-<?php
-require_once('authenticate.php');
-?>
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
@@ -24,7 +21,23 @@ require_once('authenticate.php');
       document.getElementById('mail').value = "";
       document.getElementById('data_urodzenia').value = "";
     }
-    </script>
+    </script> 
+    
+    <?php
+	    $imie = $_POST['imie'];
+	    $nazwisko = $_POST['nazwisko'];
+	    $miejscowosc = $_POST['miejscowosc'];
+	    $ulica = $_POST['ulica'];
+	    $numer_mieszkania = $_POST['numer_mieszkania'];
+	    $kod_pocztowy = $_POST['kod_pocztowy'];
+	    $mail = $_POST['mail'];
+	    $numer_telefonu = $_POST['numer_telefonu'];
+	    $data_urodzenia = $_POST['data_urodzenia'];
+	    $wojewodztwo = $_POST['wojewodztwo'];
+	    $prawo_jazdy = $_POST['dndnslakjdnalkjdnlakjsdlakjsdhlakjshdlaskjdhla'];
+	    $plec = $_POST['bdalksjdhlaskjhdlakjhsdl'];
+	    $uwagi = $_POST['uwagi']; 
+	?>
 
   </head>
   <body>
@@ -34,7 +47,7 @@ require_once('authenticate.php');
       </center>
       <br>
 
-<form id="myForm">
+<form id="myForm" action="formResult.php">
   <div class="container">
 
   		<div class="row">
@@ -96,7 +109,7 @@ require_once('authenticate.php');
 		  <div class="col-lg-4"></div>
       <div class="col-lg-4">Wybierz województwo:</div>
       <div class="col-lg-4">
-        <select name="wojewodztwa">
+        <select name="wojewodztwo" form="myForm">
           <option value="none" >-----------------</option>
           <option value="dolnoslaskie">Dolnośląskie</option>
           <option value="kujawsko_pomorskie">Kujawsko-pomorskie</option>
