@@ -82,7 +82,7 @@
         </div>
 
 
-       
+
 </div>
 
 <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Flsokolowski.cba.pl%2Fzad2.html"><p>Przejdz do walidacji</p> </a>

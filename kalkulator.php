@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <title>Kalkulator w JS</title>
         <script src="jquery-3.2.1.min.js"></script>
-
         <script type="text/javascript">
 
         var currentOperation = "";
@@ -39,43 +38,43 @@
             document.getElementById('inputLabel').value = "";
             document.getElementById('info').innerHTML = "";
           }
-          
+
         </script>
-        
+
         <script>
 	        $(document).ready(function(){
-		        
+
 		        $("#Showbutton").click(function(){
-			        
-			        
+
+
 					if($("#container").is(':hidden'))
 					{
-						$("#container").animate({ width: 'show', opacity: 1}); 
+						$("#container").animate({ width: 'show', opacity: 1});
       				}
 	  				else
 	  				{
-		  				$("#container").animate({ width: 'hide', opacity: 0.25 }); 
+		  				$("#container").animate({ width: 'hide', opacity: 0.25 });
       				}
 				});
-				
+
 			   $(':button').hover(function() {
-				   
+
 			   		$(this).animate({ fontSize : '12px',},600);
 				}
 				,
 								   function() {
 					$(this).animate({ fontSize : '20px',},600);
-					
+
 				}
-					
+
 				);
-				
+
 			});
-			
-			
+
+
 	    </script>
-        
-  	       
+
+
         <style>
 
         body {
@@ -156,12 +155,12 @@
             </div>
             <div id="info"> </div>
         </form>
-        
-        
+
+
         </div>
-        
-        
-        
-    
+
+
+
+
     </body>
 </html>

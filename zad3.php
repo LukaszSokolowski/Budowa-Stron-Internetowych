@@ -149,7 +149,7 @@
 	      <div class="col-lg-4"><input type="text" name="nazwisko" id="nazwisko" class="inputs"></div>
       	</div>
       	<br>
-	    <div class="row">	
+	    <div class="row">
 		    <div class="col-lg-4"></div>
 		   <div class="col-lg-4">Miejscowosc*:</div>
 		   <div class="col-lg-4"><input type="text" name="miejscowosc" id="miejscowosc" class="inputs"></div>
@@ -167,7 +167,7 @@
 		   <div class="col-lg-4"><input type="text" name="numer_mieszkania" id="numer_mieszkania" class="inputs"></div>
 	 	</div>
 	 	<br>
- 	  
+
 	   <div class="row">
 		   <div class="col-lg-4"></div>
 	      <div class="col-lg-4">Kod pocztowy*: (xx-xxx)</div>
@@ -241,7 +241,7 @@
 	      <div class="col-lg-4">
 		      <input type="button" value=" Zatwierdź formularz " onclick="check()">
 	      </div>
-	      
+
 	      <div class="col-lg-2">
 		      <input type="button" value="  Wyczyść formularz " onclick="clearAllInput()">
 	      </div>
