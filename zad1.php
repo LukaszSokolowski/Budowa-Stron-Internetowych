@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
+	header('Location: login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
@@ -8,7 +14,7 @@
   </head>
   <body>
     <center>
-      <a href="index.html">Powrót do strony głównej</a><br>
+      <a href="index.php">Powrót do strony głównej</a><br>
     </center>
 
 <div class="container">

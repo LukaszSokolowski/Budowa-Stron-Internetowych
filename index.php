@@ -1,5 +1,10 @@
+<?php
+session_start();
+if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
+	header('Location: login.php');
+}
+?>
 <!DOCTYPE html>
-
 <html lang="zxx">
   <head>
     <meta charset="utf-8">
@@ -15,7 +20,7 @@
         <p><a href="wzor.xml"  class="button">&nbsp;&nbsp;Faktura&nbsp;&nbsp;</a></p><br>
         <p><a href="kalkulator.php" class="button">Kalkulator</a></p><br>
         <br><br>
-        <p><a href="logout.php" class="button">&nbsp;&nbsp; Wyloguj &nbsp;&nbsp;</a></p><br>
+        <p><a href="logout.php" class="button">Wyloguj</a></p><br>
       <p>
       <br><br>
           <a href="http://validator.w3.org/check?uri=referer">

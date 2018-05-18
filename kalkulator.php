@@ -1,9 +1,16 @@
+<?php
+session_start();
+if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
+	header('Location: login.php');
+}
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Kalkulator w JS</title>
         <script src="jquery-3.2.1.min.js"></script>
+
         <script type="text/javascript">
 
         var currentOperation = "";

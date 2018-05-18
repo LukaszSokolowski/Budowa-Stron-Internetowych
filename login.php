@@ -1,5 +1,28 @@
-<!DOCTYPE html>
+<?php
+$username = null;
+$password = null;
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+	if(!empty($_POST["username"]) && !empty($_POST["password"])) {
+		$username = $_POST["username"];
+		$password = $_POST["password"];
+
+		if($username == 'user' && $password == 'password') {
+			session_start();
+			$_SESSION["authenticated"] = 'true';
+			header('Location: index.php');
+		}
+		else {
+			header('Location: login.php');
+		}
+
+	} else {
+		header('Location: login.php');
+	}
+} else {
+?>
+<!DOCTYPE html>
 <html lang="zxx">
     <head>
 	    <meta charset="utf-8">
@@ -46,14 +69,15 @@
 	</head>
   <body>
 	  <center>
-	  <form action="authenticate.php" method="post">  
+	  <form id="login" method="post">  
 		  	<br><br>
 		    <label for="username">Username:</label>
 			<input id= "username" name="username" type="text" required> <br><br><br>
 			<label for="password">Password:</label>
 			<input id= "password" name="password" type="password" required> <br>
-			<input id"loginButton" type="submit" value="Zaloguj">
+			<input id="loginButton" type="submit" value="Zaloguj">
 	  </form>
 	  </center>
 	</body>
 </html>
+<?php } ?>

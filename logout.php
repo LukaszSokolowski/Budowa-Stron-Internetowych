@@ -2,5 +2,5 @@
     session_start();
     unset($_SESSION['authenticated']);
     session_destroy();
-    header("Location: logowanie.php");
+    header("Location: index.php");
 ?>
