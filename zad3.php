@@ -23,23 +23,6 @@
     }
     </script> 
     
-    <?php
-	    $imie = $_POST['imie'];
-	    $nazwisko = $_POST['nazwisko'];
-	    $miejscowosc = $_POST['miejscowosc'];
-	    $ulica = $_POST['ulica'];
-	    $numer_mieszkania = $_POST['numer_mieszkania'];
-	    $kod_pocztowy = $_POST['kod_pocztowy'];
-	    $mail = $_POST['mail'];
-	    $numer_telefonu = $_POST['numer_telefonu'];
-	    $data_urodzenia = $_POST['data_urodzenia'];
-	    $wojewodztwo = $_POST['wojewodztwo'];
-	    $prawo_jazdy = $_POST['dndnslakjdnalkjdnlakjsdlakjsdhlakjshdlaskjdhla'];
-	    $plec = $_POST['bdalksjdhlaskjhdlakjhsdl'];
-	    $uwagi = $_POST['uwagi'];
-	     
-	?>
-
   </head>
   <body>
   		<center>
@@ -111,23 +94,23 @@
       <div class="col-lg-4">Wybierz województwo:</div>
       <div class="col-lg-4">
         <select name="wojewodztwo" form="myForm">
-          <option value="none" >-----------------</option>
-          <option value="dolnoslaskie">Dolnośląskie</option>
-          <option value="kujawsko_pomorskie">Kujawsko-pomorskie</option>
-          <option value="lubelskie">Lubelskie</option>
+          <option value="Brak" >-----------------</option>
+          <option value="Dolnośląskie">Dolnośląskie</option>
+          <option value="Kujawsko-pomorskie">Kujawsko-pomorskie</option>
+          <option value="Lubelskie">Lubelskie</option>
           <option value="Lubelskie">Lubuskie</option>
-          <option value="lodzkie">Łódzkie</option>
-          <option value="malopolskie">Małopolskie</option>
-          <option value="mazowieckie">Mazowieckie</option>
-          <option value="opolskie">Opolskie</option>
-          <option value="podkarpackie">Podkarpackie</option>
-          <option value="podlaskie">Podlaskie</option>
-          <option value="pomorskie">Pomorskie</option>
-          <option value="slaskie">Śląskie</option>
-          <option value="swietokrzyskie">Świętokrzyskie</option>
-          <option value="warminsko_mazurskie">Warmińsko-Mazurskie</option>
-          <option value="wielkopolskie">Wielkopolskie</option>
-          <option value="zachodniopomorskie">Zachodniopomorskie</option>
+          <option value="Łodzkie">Łódzkie</option>
+          <option value="Małopolskie">Małopolskie</option>
+          <option value="Mazowieckie">Mazowieckie</option>
+          <option value="Opolskie">Opolskie</option>
+          <option value="Podkarpackie">Podkarpackie</option>
+          <option value="Podlaskie">Podlaskie</option>
+          <option value="Pomorskie">Pomorskie</option>
+          <option value="Ślaskie">Śląskie</option>
+          <option value="Świetokrzyskie">Świętokrzyskie</option>
+          <option value="Warminsko-mazurskie">Warmińsko-Mazurskie</option>
+          <option value="Wielkopolskie">Wielkopolskie</option>
+          <option value="Zachodniopomorskie">Zachodniopomorskie</option>
         </select>
       </div>
 	  </div>
