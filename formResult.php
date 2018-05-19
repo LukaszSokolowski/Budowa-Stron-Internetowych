@@ -18,8 +18,8 @@
 	    $numer_telefonu = $_POST['numer_telefonu'];
 	    $data_urodzenia = $_POST['data_urodzenia'];
 	    $wojewodztwo = $_POST['wojewodztwo'];
-	    $prawo_jazdy = $_POST['dndnslakjdnalkjdnlakjsdlakjsdhlakjshdlaskjdhla'];
-	    $plec = $_POST['bdalksjdhlaskjhdlakjhsdl'];
+	    $prawo_jazdy = $_POST['p_jazdy'];
+	    $plec = $_POST['plec'];
 	    $uwagi = $_POST['uwagi'];
 	     
 	     

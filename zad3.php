@@ -118,13 +118,13 @@
 	  <div class="row">
 		  <div class="col-lg-4"></div>
       <div class="col-lg-4">Posiadam prawo jazdy:</div>
-      <div class="col-lg-4"><input type="radio" name="p_jazdy" value="tak"> Tak <input type="radio" name="p_jazdy" value="tak"> Nie </div>
+      <div class="col-lg-4"><input type="radio" name="p_jazdy" value="Tak"> Tak <input type="radio" name="p_jazdy" value="Nie"> Nie </div>
 	  </div>
 	  <br>
 	  <div class="row">
 		  <div class="col-lg-4"></div>
       <div class="col-lg-4">Płeć:</div>
-      <div class="col-lg-4"><input type="radio" name="plec" value="kobieta">&nbsp;Kobieta &nbsp;<input type="radio" name="plec" value="mezczyzna">&nbsp;Mężczyzna </div>
+      <div class="col-lg-4"><input type="radio" name="plec" value="Kobieta">&nbsp;Kobieta &nbsp;<input type="radio" name="plec" value="Mężczyzna">&nbsp;Mężczyzna </div>
 	  </div>
 	  <br>
 	  <div class="row">
