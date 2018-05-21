@@ -21,8 +21,6 @@
 	    $prawo_jazdy = $_POST['p_jazdy'];
 	    $plec = $_POST['plec'];
 	    $uwagi = $_POST['uwagi'];
-	     
-	     
 	?>
 
 
