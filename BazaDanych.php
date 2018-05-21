@@ -63,8 +63,8 @@
 						    $nazwisko = $row['Nazwisko'];
 						    
 					      echo "<form action=\"updateOrDelete.php\" method=\"post\">";
-						  echo "<input type=\"text\" name=\"clientName\" value=\"$imie\">";
-						  echo "<input type=\"text\" name=\"clientSurname\" value=\"$nazwisko\">";
+						  echo "<input type=\"text\" name=\"clientName\" value=\"$imie\" disabled=\"disabled\">";
+						  echo "<input type=\"text\" name=\"clientSurname\" value=\"$nazwisko\" disabled=\"disabled\">";
 						  echo "<input type=\"submit\" name=\"update_button\" value=\"Update\">";
 						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Delete\">";
 						  echo "<input type=\"hidden\" name=\"rowID\" value=\"$id\">";
