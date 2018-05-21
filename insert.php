@@ -12,12 +12,14 @@
 					    die("Connection failed: " . $conn->connect_error);
 					}
 					
-					$sql = "INSERT INTO Klienci (Imie, Nazwisko) values ('$name','$surname')";
-					
-					
-					
-					
-					
+					$sql = "INSERT INTO Klienci (Imie, Nazwisko) VALUES ('$name','$surname')";
+								
+					if ($conn->query($sql) === FALSE) {
+					    echo "Error: " . $sql . "<br>" . $conn->error;
+					}
 					$conn->close();
+					header("refresh:1; url=BazaDanych.php");
+					
+					
 
 ?>
