@@ -92,8 +92,8 @@
 		
 				<form action="insert.php" method="post">
 						<div class="input">
-						    <input type="text" name="clientName" placeholder="Tu wpisz imię">
-							<input type="text" name="clientSurname" placeholder="Tu wpisz nazwisko">
+						    <input type="text" name="clientName" placeholder="Tu wpisz imię" required>
+							<input type="text" name="clientSurname" placeholder="Tu wpisz nazwisko" required>
 							<input type="submit" value="Dodaj rekord">
 						</div>
 				</form>
