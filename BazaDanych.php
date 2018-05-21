@@ -59,7 +59,7 @@
   		<center><a href="index.php">Powrót do strony głównej</a><br></center><br>
   		
   		
-  		 <?php
+  		<?php
 					$servername = "localhost";
 					$username = "root";
 					$password = "root";
@@ -71,18 +71,26 @@
 					    die("Connection failed: " . $conn->connect_error);
 					}
 					
-					$sql = "SELECT * FROM Klienci";
+					$sql = "SELECT id,Imie,Nazwisko FROM Klienci";
 					$result = $conn->query($sql);
 					
 					if ($result->num_rows > 0) {
 					    while($row = $result->fetch_assoc()) {
-					        
-					        
-					      echo "<div class=\"row\">";
-						  echo "<div class=\"name\">" . $row['Imie'] . "</div>";
-						  echo "<div class=\"surname\">" . $row['Nazwisko'] .  "</div>";
-						  echo "</div>";					        
-					        
+						    $id =$row['id'];
+						    $imie =$row['Imie'];
+						    $nazwisko = $row['Nazwisko'];
+						    
+					      echo "<form action=\"updateOrDelete.php\" method=\"post\">";
+						  echo "<input type=\"text\" name=\"clientName\" value=\"$imie\">";
+						  echo "<input type=\"text\" name=\"clientSurname\" value=\"$nazwisko\">";
+						  echo "<input type=\"submit\" name=\"update_button\" value=\"Update\">";
+						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Delete\">";
+						  echo "<input type=\"hidden\" name=\"RowID\" value=\"$id\">";
+						  
+						 						  
+						  
+						  echo "</form>";			
+						  		        
 					    }
 					} else {
 					    echo "0 results";
