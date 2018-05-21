@@ -34,6 +34,24 @@
 	    	width: 200px;
 	    	height: 30px;
     	}
+    	.input {
+	    	padding-left: 250px;
+	    	border: 1px solid black;
+
+    	}
+    	input[type="submit"] {
+			width: 150px;
+			margin-left: 65px;
+			height: 30px;
+			border-radius: 4px;
+			
+		}	
+		input[type="text"] {
+			width: 180px;
+			height: 30px;
+			border-radius: 4px;
+			margin-right: 14px;
+		}	
     </style>
     
   </head>
@@ -71,6 +89,14 @@
 					}
 					$conn->close();
 		?> 
+		
+				<form action="insert.php" method="post">
+						<div class="input">
+						    <input type="text" name="clientName" placeholder="Tu wpisz imię">
+							<input type="text" name="clientSurname" placeholder="Tu wpisz nazwisko">
+							<input type="submit" value="Dodaj rekord">
+						</div>
+				</form>
   		  		
 	</body>
 </html>
