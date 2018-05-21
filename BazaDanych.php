@@ -16,42 +16,23 @@
 	    	font-family: verdana;
     	}
     	
-    	.row {
-	    	border: 1px solid black;
-	    	padding-left: 250px;
-	    	margin-bottom: 10px;
-    	}
-    	.name {
-	    	border: 1px solid red;
-	    	float: left;
-	    	width: 200px;
-	    	height: 30px;
-
-    	}
-    	.surname {
-	    	border: 1px solid green;
-	    	float: left;
-	    	width: 200px;
-	    	height: 30px;
-    	}
-    	.input {
-	    	padding-left: 250px;
-	    	border: 1px solid black;
-
-    	}
-    	input[type="submit"] {
+       	input[type="submit"] {
 			width: 150px;
 			margin-left: 65px;
 			height: 30px;
 			border-radius: 4px;
+			
 			
 		}	
 		input[type="text"] {
 			width: 180px;
 			height: 30px;
 			border-radius: 4px;
-			margin-right: 14px;
-		}	
+			margin-left: 65px;
+		}
+		#submitButton {
+			margin-left: 54px;
+		}
     </style>
     
   </head>
@@ -76,6 +57,7 @@
 					
 					if ($result->num_rows > 0) {
 					    while($row = $result->fetch_assoc()) {
+						    
 						    $id =$row['id'];
 						    $imie =$row['Imie'];
 						    $nazwisko = $row['Nazwisko'];
@@ -87,8 +69,6 @@
 						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Delete\">";
 						  echo "<input type=\"hidden\" name=\"rowID\" value=\"$id\">";
 						  
-						 						  
-						  
 						  echo "</form>";			
 						  		        
 					    }
@@ -97,12 +77,13 @@
 					}
 					$conn->close();
 		?> 
-		
+				<br><br>
+				<p style="padding-left: 65px;">Dodaj nowy rekord wpisując wartości w poniższe pola</p>
 				<form action="insert.php" method="post">
 						<div class="input">
 						    <input type="text" name="clientName" placeholder="Tu wpisz imię" required>
 							<input type="text" name="clientSurname" placeholder="Tu wpisz nazwisko" required>
-							<input type="submit" value="Dodaj rekord">
+							<input type="submit" value="Dodaj rekord" id="submitButton">
 						</div>
 				</form>
   		  		

@@ -2,6 +2,8 @@
 					$name = $_POST['clientName'];
 					$surname = $_POST['clientSurname'];
 					$id = $_POST['rowID'];
+					
+					
     				$servername = "localhost";
 					$username = "root";
 					$password = "root";
@@ -16,6 +18,7 @@
 					
 					
 						if (isset($_POST['update_button'])) {
+							
 						    //update action
 						} else if (isset($_POST['delete_button'])) {
 						    $sql = "DELETE FROM Klienci WHERE id = $id";
