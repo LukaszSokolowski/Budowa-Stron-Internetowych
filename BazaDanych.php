@@ -85,7 +85,7 @@
 						  echo "<input type=\"text\" name=\"clientSurname\" value=\"$nazwisko\">";
 						  echo "<input type=\"submit\" name=\"update_button\" value=\"Update\">";
 						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Delete\">";
-						  echo "<input type=\"hidden\" name=\"RowID\" value=\"$id\">";
+						  echo "<input type=\"hidden\" name=\"rowID\" value=\"$id\">";
 						  
 						 						  
 						  
