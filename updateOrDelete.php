@@ -3,7 +3,6 @@
 					$surname = $_POST['clientSurname'];
 					$id = $_POST['rowID'];
 					
-					
     				$servername = "localhost";
 					$username = "root";
 					$password = "root";
@@ -19,11 +18,11 @@
 					
 						if (isset($_POST['update_button'])) {
 							
-						    //update action
+						    $sql = "UPDATE Klienci SET Imie = '$name' , Nazwisko = '$surname' WHERE id=$id";
 						} else if (isset($_POST['delete_button'])) {
 						    $sql = "DELETE FROM Klienci WHERE id = $id";
 						} else {
-						    //no button pressed
+							
 						}
 													
 					if ($conn->query($sql) === FALSE) {
