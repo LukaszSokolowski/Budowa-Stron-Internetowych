@@ -7,11 +7,10 @@
     <title>Zadanie 3</title>
     <link href="bootstrap.min.css" rel="stylesheet">
     
-    
     <style type="text/css">
     	
     	body {
-	    	background-color: #abdaea;
+	    	background-color: #dbebf0;
 	    	font-size: 15px;
 	    	font-family: verdana;
     	}
@@ -35,11 +34,24 @@
 		}
     </style>
     
+    
+    
+    <script type="text/javascript">
+
+		function changes(idElement) {
+			document.getElementById( idElement ).disabled = false;
+			var str1 = idElement.toString();
+			var str2 = "Surname";
+			var idElementSurname = str1.concat(str2);
+			document.getElementById( idElementSurname ).disabled = false;
+		}
+		
+	</script>
+	      
   </head>
  	<body>
   		<center><a href="index.php">Powrót do strony głównej</a><br></center><br>
-  		
-  		
+
   		<?php
 					$servername = "localhost";
 					$username = "root";
@@ -61,15 +73,19 @@
 						    $id =$row['id'];
 						    $imie =$row['Imie'];
 						    $nazwisko = $row['Nazwisko'];
+						    $idSurname = $id . "Surname";
 						    
 					      echo "<form action=\"updateOrDelete.php\" method=\"post\">";
-						  echo "<input type=\"text\" name=\"clientName\" value=\"$imie\" disabled=\"disabled\">";
-						  echo "<input type=\"text\" name=\"clientSurname\" value=\"$nazwisko\" disabled=\"disabled\">";
-						  echo "<input type=\"submit\" name=\"update_button\" value=\"Update\">";
-						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Delete\">";
+						  echo "<input type=\"text\" id=\"$id\" name=\"clientName\" value=\"$imie\" disabled=\"disabled\">";
+						  echo "<input type=\"text\" id=\"$idSurname\" name=\"clientSurname\" value=\"$nazwisko\" disabled=\"disabled\">";
+						  echo "<input type=\"button\" name=\"edit_button\" id=\"$id\" value=\"Edit\" onclick=\"changes($id)\">";
+						  echo "<input type=\"submit\" name=\"update_button\" value=\"Update\" id=\"$id\">";
+						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Delete\" id=\"$id\">";
 						  echo "<input type=\"hidden\" name=\"rowID\" value=\"$id\">";
 						  
 						  echo "</form>";			
+						  
+						  echo "$id";
 						  		        
 					    }
 					} else {
