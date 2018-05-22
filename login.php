@@ -2,7 +2,7 @@
 $username = null;
 $password = null;
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { //mozna wyslac metode post bez zadnej danej wiec mozna sprawdzic
 
 	if(!empty($_POST["username"]) && !empty($_POST["password"])) {
 		$username = $_POST["username"];
@@ -10,17 +10,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		if($username == 'user' && $password == 'password') {
 			session_start();
-			$_SESSION["authenticated"] = 'true';
-			header('Location: index.php');
+			$_SESSION["authenticated"] = 'true';	//globalna zmienna do przetrzymywania informacji o sesji
+			header('Location: index.php');			//Powiodlo sie zalogowanie
 		}
 		else {
-			header('Location: login.php');
+			header('Location: login.php');			//wykona sie gdy bledny login
 		}
 
 	} else {
-		header('Location: login.php');
+		header('Location: login.php');				//pusty login co raczej nie jest mozliwe ale warto
 	}
-} else {
+} else {											//jesli nie metoda post to logowanie 
 ?>
 <!DOCTYPE html>
 

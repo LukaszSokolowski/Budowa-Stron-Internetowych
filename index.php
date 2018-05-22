@@ -17,6 +17,7 @@ require_once('authenticate.php');
         <p><a href="wzor.xml"  class="button">&nbsp;&nbsp;&nbsp;&nbsp;Faktura&nbsp;&nbsp;&nbsp;&nbsp;</a></p><br>
         <p><a href="kalkulator.php" class="button">&nbsp;&nbsp;Kalkulator&nbsp;&nbsp;</a></p><br>
         <p><a href="BazaDanych.php" class="button">Baza Danych</a></p><br>
+        <p><a href="Kody.txt" class="button">Kody źródłowe</a></p><br>
         <br><br>
         <p><a href="logout.php" class="button">&nbsp;&nbsp;&nbsp;Wyloguj&nbsp;&nbsp;&nbsp;</a></p><br>
         
