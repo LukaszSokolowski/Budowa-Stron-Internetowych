@@ -16,41 +16,70 @@
     	}
     	
        	input[type="submit"] {
-			width: 150px;
-			margin-left: 65px;
-			height: 30px;
-			border-radius: 4px;
-			
-			
+			width: 100px;
+			margin-left: 15px;
+			height: 20px;
+			border-radius: 10px;
+			font-size: 10px;
 		}	
+		
 		input[type="text"] {
-			width: 180px;
+			width: 200px;
 			height: 30px;
-			border-radius: 4px;
-			margin-left: 65px;
+			border-radius: 1px;
+			margin-left: 35px;
+			margin-bottom: 5px;
 		}
+		
+		input[type="button"] {
+			width: 100px;
+			margin-left: 35px;
+			height: 20px;
+			border-radius: 10px;
+			font-size: 10px;
+
+		}	
+		
 		#submitButton {
 			margin-left: 54px;
 		}
+		
+		
     </style>
-    
-    
     
     <script type="text/javascript">
 
-		function changes(idElement) {
-			document.getElementById( idElement ).disabled = false;
-			var str1 = idElement.toString();
-			var str2 = "Surname";
-			var idElementSurname = str1.concat(str2);
-			document.getElementById( idElementSurname ).disabled = false;
+		function changeInputWhenUserWantToEdit(idElement) {
+			if (document.getElementById( idElement ).disabled) {
+				document.getElementById( idElement ).disabled = false;
+			} else {
+				document.getElementById( idElement ).disabled = true;
+			}
+				var str1 = idElement.toString();
+				var str2 = "Surname";
+				var idElementSurname = str1.concat(str2);
+				
+			if (document.getElementById( idElementSurname ).disabled) {
+				document.getElementById( idElementSurname ).disabled = false;
+			} else {
+				document.getElementById( idElementSurname ).disabled = true;
+			}
 		}
 		
+		function changeForAcceptValues(idElement) {
+				document.getElementById( idElement ).disabled = false;
+				var str1 = idElement.toString();
+				var str2 = "Surname";
+				var idElementSurname = str1.concat(str2);
+				document.getElementById( idElementSurname ).disabled = false;
+
+		}
+								
 	</script>
 	      
   </head>
  	<body>
-  		<center><a href="index.php">Powrót do strony głównej</a><br></center><br>
+  		<center><a href="index.php">Powrót do strony głównej</a><br><br>
 
   		<?php
 					$servername = "localhost";
@@ -71,21 +100,20 @@
 					    while($row = $result->fetch_assoc()) {
 						    
 						    $id =$row['id'];
-						    $imie =$row['Imie'];
-						    $nazwisko = $row['Nazwisko'];
+						    $name =$row['Imie'];
+						    $surname = $row['Nazwisko'];
 						    $idSurname = $id . "Surname";
 						    
 					      echo "<form action=\"updateOrDelete.php\" method=\"post\">";
-						  echo "<input type=\"text\" id=\"$id\" name=\"clientName\" value=\"$imie\" disabled=\"disabled\">";
-						  echo "<input type=\"text\" id=\"$idSurname\" name=\"clientSurname\" value=\"$nazwisko\" disabled=\"disabled\">";
-						  echo "<input type=\"button\" name=\"edit_button\" id=\"$id\" value=\"Edit\" onclick=\"changes($id)\">";
-						  echo "<input type=\"submit\" name=\"update_button\" value=\"Update\" id=\"$id\">";
-						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Delete\" id=\"$id\">";
+					      
+						  echo "<input type=\"text\" id=\"$id\" name=\"clientName\" value=\"$name\" disabled=\"disabled\">";
+						  echo "<input type=\"text\" id=\"$idSurname\" name=\"clientSurname\" value=\"$surname\" disabled=\"disabled\">";
+						  echo "<input type=\"button\" name=\"edit_button\" value=\"Edytuj rekord\" onclick=\"changeInputWhenUserWantToEdit($id)\">";
+						  echo "<input type=\"submit\" name=\"update_button\" value=\"Akceptuj edycje\" onclick=\"changeForAcceptValues($id)\">";
+						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Usuń rekord\">";
 						  echo "<input type=\"hidden\" name=\"rowID\" value=\"$id\">";
 						  
 						  echo "</form>";			
-						  
-						  echo "$id";
 						  		        
 					    }
 					} else {
@@ -102,6 +130,6 @@
 							<input type="submit" value="Dodaj rekord" id="submitButton">
 						</div>
 				</form>
-  		  		
+  		  		</center>
 	</body>
 </html>
