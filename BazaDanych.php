@@ -4,11 +4,10 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
 	 <meta charset="utf-8">
-    <title>Zadanie 3</title>
+    <title>Baza Danych</title>
     <link href="bootstrap.min.css" rel="stylesheet">
     
     <style type="text/css">
-    	
     	body {
 	    	background-color: #dbebf0;
 	    	font-size: 15px;
@@ -26,7 +25,7 @@
 		input[type="text"] {
 			width: 200px;
 			height: 30px;
-			border-radius: 1px;
+			border-radius: 5px;
 			margin-left: 35px;
 			margin-bottom: 5px;
 		}
@@ -37,14 +36,11 @@
 			height: 20px;
 			border-radius: 10px;
 			font-size: 10px;
-
 		}	
 		
 		#submitButton {
 			margin-left: 54px;
 		}
-		
-		
     </style>
     
     <script type="text/javascript">
@@ -66,13 +62,13 @@
 			}
 		}
 		
+		
 		function changeForAcceptValues(idElement) {
 				document.getElementById( idElement ).disabled = false;
 				var str1 = idElement.toString();
 				var str2 = "Surname";
 				var idElementSurname = str1.concat(str2);
 				document.getElementById( idElementSurname ).disabled = false;
-
 		}
 								
 	</script>
@@ -110,19 +106,19 @@
 						  echo "<input type=\"text\" id=\"$idSurname\" name=\"clientSurname\" value=\"$surname\" disabled=\"disabled\">";
 						  echo "<input type=\"button\" name=\"edit_button\" value=\"Edytuj rekord\" onclick=\"changeInputWhenUserWantToEdit($id)\">";
 						  echo "<input type=\"submit\" name=\"update_button\" value=\"Akceptuj edycje\" onclick=\"changeForAcceptValues($id)\">";
-						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Usuń rekord\">";
+						  echo "<input type=\"submit\" name=\"delete_button\" value=\"Usuń rekord\" onclick=\"return confirm('Czy na pewno chcesz usunąć ten rekord?');\" >";
 						  echo "<input type=\"hidden\" name=\"rowID\" value=\"$id\">";
 						  
 						  echo "</form>";			
 						  		        
 					    }
 					} else {
-					    echo "0 results";
+					    echo "Brak elementów w tabeli. Dodaj nowe elementy.";
 					}
 					$conn->close();
 		?> 
 				<br><br>
-				<p style="padding-left: 65px;">Dodaj nowy rekord wpisując wartości w poniższe pola</p>
+				<p>Dodaj nowy rekord wpisując wartości w poniższe pola</p>
 				<form action="insert.php" method="post">
 						<div class="input">
 						    <input type="text" name="clientName" placeholder="Tu wpisz imię" required>
