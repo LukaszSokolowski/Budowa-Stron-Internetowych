@@ -9,7 +9,7 @@
     
     <style type="text/css">
     	body {
-	    	background-color: #dbebf0;
+	    	background-color: #ffeab7;
 	    	font-size: 15px;
 	    	font-family: verdana;
     	}
@@ -75,7 +75,7 @@
 	      
   </head>
  	<body>
-  		<center><a href="index.php">Powrót do strony głównej</a><br><br>
+  		<center><a href="index.php">Powrót do strony głównej</a><br><br><br><br>
 
   		<?php
 					$servername = "localhost";
@@ -118,7 +118,7 @@
 					$conn->close();
 		?> 
 				<br><br>
-				<p>Dodaj nowy rekord wpisując wartości w poniższe pola</p>
+				<p style="margin-right: 155px;">Dodaj nowy rekord wpisując wartości w poniższe pola</p>
 				<form action="insert.php" method="post">
 						<div class="input">
 						    <input type="text" name="clientName" placeholder="Tu wpisz imię" required>

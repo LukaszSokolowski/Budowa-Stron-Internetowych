@@ -18,7 +18,7 @@
 					    echo "Error: " . $sql . "<br>" . $conn->error;
 					}
 					$conn->close();
-					header("refresh:1; url=BazaDanych.php");
+					header("refresh:0; url=BazaDanych.php");
 					
 					
 
